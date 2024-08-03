@@ -1,10 +1,10 @@
 services:
   dev-web:
-    image: odoo:15.0
+    image: odoo:16.0
     depends_on:
       - dev-db
     ports:
-      - "8015:8069"
+      - "8016:8069"
     environment:
       - HOST=dev-db
       - USER=odoo
@@ -14,19 +14,19 @@ services:
       - dev-data:/var/lib/odoo
       # - ./odoo/odoo:/usr/lib/python3/dist-packages/odoo
       # CONF FILE :
-      - ./conf/odoo15_dev.conf:/etc/odoo/odoo.conf
+      - ./conf/odoo16_dev.conf:/etc/odoo/odoo.conf
       # LOG FILE
-      - ./log:/mnt/odoo15/log
+      - ./log:/mnt/odoo16/log
       # ODOO CORE:
-      - ./odoo/odoo:/mnt/odoo15/odoo/odoo
+      - ./odoo/odoo:/mnt/odoo16/odoo/odoo
       # ODOO ENTERPRISE:
-      # - ./odoo/enterprise:/mnt/odoo15/odoo/enterprise
+      # - ./odoo/enterprise:/mnt/odoo16/odoo/enterprise
       # ODOO THEMES
-      - ./odoo/design-themes:/mnt/odoo15/odoo/design-themes
+      - ./odoo/design-themes:/mnt/odoo16/odoo/design-themes
       # OCA ADDONS
-      - ./oca:/mnt/odoo15/oca
+      - ./oca:/mnt/odoo16/oca
       # CUSTOM ADDONS
-      - ./custom/dev:/mnt/odoo15/custom_dev
+      - ./custom/dev:/mnt/odoo16/custom_dev
 
   dev-db:
     image: postgres:13

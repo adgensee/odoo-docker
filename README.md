@@ -1,4 +1,4 @@
-# odoo15.0 docker development environment
+# odoo16.0 docker development environment
 
 ## Prerequirements
 
@@ -8,7 +8,7 @@ Also, you need to install git, we recommand to install 'GitHub Desktop' applicat
 Clone repository in your odoo development folder (exemple user/odoo):
 
     mkdir odoo && cd odoo
-    git clone git@github.com:adgensee/odoo-docker.git --depth 1 --branch 15.0 odoo15
+    git clone git@github.com:adgensee/odoo-docker.git --depth 1 --branch 16.0 odoo16
 
 ## Installation and Update
 
@@ -16,23 +16,23 @@ Clone repository in your odoo development folder (exemple user/odoo):
 
 ## Start :
 
-    docker-compose -f docker-compose-odoo15_dev.yml up -d
+    docker-compose -f docker-compose-odoo16_dev.yml up -d
 
 ## Stop :
 
     docker ps
-    docker stop odoo15-dev-web-1
-    docker stop odoo15-dev-db-1
+    docker stop odoo16-dev-web-1
+    docker stop odoo16-dev-db-1
 
 ## Acces from browser :
 
-    http://localhost:8015
+    http://localhost:8016
 
 
 ## Default informations : 
 
     Master Password : ######
-    Database : odoo15_dev
+    Database : odoo16_dev
 
     Admin email : admin
     Admin password : admin
