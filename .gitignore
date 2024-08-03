@@ -1,0 +1,8 @@
+/odoo/*
+/oca/*
+/custom/*
+/conf/*.conf
+/log/*
+*.yml
+*.pyc
+*.DS_Store

@@ -1,0 +1,42 @@
+services:
+  dev-web:
+    image: odoo:15.0
+    depends_on:
+      - dev-db
+    ports:
+      - "8015:8069"
+    environment:
+      - HOST=dev-db
+      - USER=odoo
+      - PASSWORD=odoo
+    volumes:
+      # USER FILES
+      - dev-data:/var/lib/odoo
+      # - ./odoo/odoo:/usr/lib/python3/dist-packages/odoo
+      # CONF FILE :
+      - ./conf/odoo15_dev.conf:/etc/odoo/odoo.conf
+      # LOG FILE
+      - ./log:/mnt/odoo15/log
+      # ODOO CORE:
+      - ./odoo/odoo:/mnt/odoo15/odoo/odoo
+      # ODOO ENTERPRISE:
+      # - ./odoo/enterprise:/mnt/odoo15/odoo/enterprise
+      # ODOO THEMES
+      - ./odoo/design-themes:/mnt/odoo15/odoo/design-themes
+      # OCA ADDONS
+      - ./oca:/mnt/odoo15/oca
+      # CUSTOM ADDONS
+      - ./custom/dev:/mnt/odoo15/custom_dev
+
+  dev-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - dev-db:/var/lib/postgresql/data
+
+volumes:
+  dev-data:
+  dev-db:
