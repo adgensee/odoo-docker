@@ -31,8 +31,8 @@ Clone repository in your odoo development folder (exemple user/odoo):
 
 ## Default informations : 
 
-Master Password : ######
-Database : odoo15_dev
+    Master Password : ######
+    Database : odoo15_dev
 
-Admin email : admin
-Admin password : admin
+    Admin email : admin
+    Admin password : admin
