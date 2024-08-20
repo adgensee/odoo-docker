@@ -1,4 +1,4 @@
-# odoo17.0 docker development environment
+# Odoo 17.0 docker development environment
 
 ## Prerequirements
 
