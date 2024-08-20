@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Adgensee example module",
-    "version": "16.0.1.0",
+    "version": "17.0.1.0",
     "category": "Other",
     
     "author": "Adgensee",
